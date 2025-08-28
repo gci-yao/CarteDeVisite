@@ -23,6 +23,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.cartedevisite.ui.theme.CarteDeVisiteTheme
+import androidx.compose.ui.graphics.Brush
+
+
+
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,13 +60,16 @@ fun BusinessCardScreen(
     email: String,
     location: String
 ) {
+    // Définition du dégradé de couleurs pour le fond
+    val gradientColors = listOf(Color(0xFF2E6C8C), Color(0xFF1B4F72), Color(0xFF133950))
     // Colonne principale
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color(0xFF2E6C8C)),
+            .background(Brush.verticalGradient(gradientColors)),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
+
         // Colonne du haut (prenant de l'espace pour centrer le contenu)
         Column(
             modifier = Modifier
@@ -103,15 +110,15 @@ fun BusinessCardScreen(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Bottom
         ) {
-            Column {
-                ContactInfoItem(icon = Icons.Default.Phone, text = phone)
+            Column() {
+                ContactInfoItem(icon = Icons.Default.Phone, text = phone,)
                 ContactInfoItem(icon = Icons.Default.Email, text = email)
                 ContactInfoItem(icon = Icons.Default.Place, text = location)
             }
         }
     }
 }
-
+// composable pour les icons
 @Composable
 fun ContactInfoItem(icon: ImageVector, text: String) {
     Row(
