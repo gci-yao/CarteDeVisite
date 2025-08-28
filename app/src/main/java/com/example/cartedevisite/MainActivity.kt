@@ -17,6 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -26,19 +27,19 @@ import com.example.cartedevisite.ui.theme.CarteDeVisiteTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
+        setContent{
             CarteDeVisiteTheme {
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = Color(0xFF2E6C8C)
                 ) {
                     BusinessCardScreen(
-                        name = "Charles Yao",
-                        title = "Mobile Developer",
-                        company = "Fullstack developer",
-                        phone = "+225 07 06 83 67 22",
-                        email = "redteamer@gmail.com",
-                        location = "Abidjan/Faya"
+                        name = stringResource(R.string.name),
+                        title = stringResource(R.string.mobile),
+                        company = stringResource(R.string.function),
+                        phone = stringResource(R.string.number),
+                        email = stringResource(R.string.email),
+                        location = stringResource(R.string.location)
                     )
                 }
             }
@@ -137,12 +138,12 @@ fun CarteDeVisitePreview() {
             color = Color(0xFF2E6C8C)
         ) {
             BusinessCardScreen(
-                name = "Charles Yao",
-                title = "Mobile Developer",
-                company = "Fullstack developer",
-                phone = "+225 07 06 83 67 22",
-                email = "redteamer@gmail.com",
-                location = "Abidjan/Faya"
+                name = stringResource(R.string.namePreview),
+                title = stringResource(R.string.mobilePreview),
+                company = stringResource(R.string.functionPreview),
+                phone = stringResource(R.string.numberPreview),
+                email = stringResource(R.string.emailPreview),
+                location = stringResource(R.string.locationPreview)
             )
         }
     }

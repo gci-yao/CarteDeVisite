@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">CarteDeVisite</string>
+    <string name="name">Charles Yao</string>
+    <string name="mobile">Mobile Developer</string>
+    <string name="function">Fullstack developer</string>
+    <string name="number">+225 07 06 83 67 22</string>
+    <string name="email">redteamer@gmail.com</string>
+    <string name="location">Abidjan/Faya</string>
+    <string name="namePreview">Charles Yao</string>
+    <string name="mobilePreview">Mobile Developer</string>
+    <string name="functionPreview">Fullstack developer</string>
+    <string name="numberPreview">+225 07 06 83 67 22</string>
+    <string name="emailPreview">redteamer@gmail.com</string>
+    <string name="locationPreview">Abidjan/Faya</string>
 </resources>
